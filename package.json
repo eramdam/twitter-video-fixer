@@ -4,7 +4,7 @@
   "description": "A WebExtension for Firefox fixing Twitter/TweetDeck videos playback",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "web-ext build -s extension"
   },
   "repository": {
     "type": "git",
