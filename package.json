@@ -1,10 +1,11 @@
 {
   "name": "twitter-video-fixer",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A WebExtension for Firefox fixing Twitter/TweetDeck videos playback",
   "main": "index.js",
   "scripts": {
-    "build": "web-ext build -s extension --overwrite-dest"
+    "build": "web-ext build -s extension --overwrite-dest",
+    "start": "web-ext run -s extension --bc"
   },
   "repository": {
     "type": "git",
