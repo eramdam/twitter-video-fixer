@@ -4,7 +4,7 @@
   "description": "A WebExtension for Firefox fixing Twitter/TweetDeck videos playback",
   "main": "index.js",
   "scripts": {
-    "build": "web-ext build -s extension"
+    "build": "web-ext build -s extension --overwrite-dest"
   },
   "repository": {
     "type": "git",
