@@ -10,8 +10,6 @@
   },
   "permissions": [
     "https://twitter.com/i/videos/*",
-    "https://syndication.twitter.com/i/jot*",
-    "https://*.twimg.com/*",
     "<all_urls>",
     "webRequest",
     "webRequestBlocking"
