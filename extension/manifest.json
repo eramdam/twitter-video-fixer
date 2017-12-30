@@ -1,0 +1,20 @@
+{
+  "name": "Twitter Videos Fixer",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "homepage_url": "https://github.com/eramdam/twitter-video-fixer",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "https://twitter.com/i/videos/*",
+    "https://syndication.twitter.com/i/jot*",
+    "https://cdn.*.twimg.com/*",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "description": "A Firefox add-on fixing Twitter/TweetDeck embedded videos playback"
+}
