@@ -1,6 +1,6 @@
 {
   "name": "Twitter Videos Fixer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "manifest_version": 2,
   "homepage_url": "https://github.com/eramdam/twitter-video-fixer",
   "background": {

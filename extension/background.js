@@ -15,13 +15,10 @@ chrome.permissions.contains({
     const newHeaders = [...e.responseHeaders];
     const cspHeaderIdx = newHeaders.findIndex(h => h.name === 'content-security-policy');
 
-    if (cspHeaderIdx === -1) {
-      newHeaders.push({
-        name: 'content-security-policy',
-        value: ' ',
-      });
-    } else {
-      newHeaders[cspHeaderIdx].value = ' ';
+    if (cspHeaderIdx > -1) {
+      // Per https://bugzilla.mozilla.org/show_bug.cgi?id=1425672#c9
+      // Adding blob: to the default-src directive fixes the whole thing
+      newHeaders[cspHeaderIdx].value = newHeaders[cspHeaderIdx].value.replace(`default-src 'self'`, `default-src 'self' blob:`)
     }
 
     return {
@@ -29,11 +26,7 @@ chrome.permissions.contains({
     };
   }, {
     urls: [
-      // endpoint used by TweetDeck
       'https://twitter.com/i/videos/*',
-      // endpoint used by the video widget
-      'https://syndication.twitter.com/i/jot*',
-      'https://cdn.*.twimg.com/*',
     ],
   }, ['responseHeaders', 'blocking']);
 });
