@@ -18,7 +18,8 @@ chrome.permissions.contains({
     if (cspHeaderIdx > -1) {
       // Per https://bugzilla.mozilla.org/show_bug.cgi?id=1425672#c9
       // Adding blob: to the default-src directive fixes the whole thing
-      newHeaders[cspHeaderIdx].value = newHeaders[cspHeaderIdx].value.replace(`default-src 'self'`, `default-src 'self' blob:`)
+      newHeaders[cspHeaderIdx].value = newHeaders[cspHeaderIdx].value.replace(`default-src `, `default-src blob: `)
+      newHeaders[cspHeaderIdx].value = newHeaders[cspHeaderIdx].value.replace(`script-src `, `script-src blob: `)
     }
 
     return {
