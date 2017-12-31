@@ -1,7 +1,7 @@
 chrome.permissions.contains({
   // <all_urls> seems to be required to use the webRequest APIs on Firefox (57 at least)
   // Even though it's not needed in Chrome, definitely sounds like a Firefox bug
-  permissions: ['webRequest', 'webRequestBlocking', '<all_urls>'],
+  permissions: ['webRequest', 'webRequestBlocking'],
 }, (hasWR) => {
   if (!hasWR) {
     return;
