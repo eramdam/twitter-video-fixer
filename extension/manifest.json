@@ -9,8 +9,7 @@
     ]
   },
   "permissions": [
-    "https://twitter.com/i/videos/*",
-    "<all_urls>",
+    "https://*.twitter.com/*",
     "webRequest",
     "webRequestBlocking"
   ],
